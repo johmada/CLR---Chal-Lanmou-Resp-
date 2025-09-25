@@ -175,18 +175,22 @@ Ici, pas de prise de tête : juste l’envie de profiter de la vie, de se retrou
     </form>
   </section>
 
-  <footer>
-    <p>&copy; Association C-L-R</p>
-  </footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-    grabCursor: true,
-  });
-</script>
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,               // boucle infinie
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      grabCursor: true,          // curseur main quand on peut glisser
+    });
+  </script>
 
 </body>
 </html>
