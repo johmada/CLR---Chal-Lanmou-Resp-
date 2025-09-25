@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chalè-Lanmou-Respé</title>
   <style>
-    .swiper {
+.swiper {
   width: 90%;
   max-width: 800px;
   height: 300px;
   margin: 2rem auto;
   border-radius: 12px;
   overflow: hidden;
+  background-color: #000; /* fond noir si l'image ne remplit pas tout */
 }
 
 .swiper-slide {
@@ -23,7 +24,7 @@
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* garde le ratio d'origine */
   object-position: center;
 }
 
@@ -158,19 +159,25 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section>
-  
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="CLR.jpg" alt="logo"></div>
-    <div class="swiper-slide"><img src="CLR_birthday_2025.jpeg" alt="birth"></div>
-    <div class="swiper-slide"><img src="CLR_DUNETTE.jpeg" alt="logo"></div>
+<section>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="CLR.jpg" alt="logo">
+      </div>
+      <div class="swiper-slide">
+        <img src="CLR_birthday_2025.jpeg" alt="birth">
+      </div>
+      <div class="swiper-slide">
+        <img src="CLR_DUNETTE.jpeg" alt="logo">
+      </div>
+    </div>
+    <!-- Pagination et navigation -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
-  </section>
+</section>
 
   <section id="about">
     <h2>Qui sommes-nous ?</h2>
@@ -210,20 +217,20 @@ Ici, pas de prise de tête : juste l’envie de profiter de la vie, de se retrou
   </section>
 
  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,               // boucle infinie
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      grabCursor: true,          // curseur main quand on peut glisser
-    });
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.swiper', {
+  loop: true,               
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  grabCursor: true,          
+});
   </script>
 
 </body>
