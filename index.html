@@ -3,28 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Association Solidarité Locale</title>
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
+  <title>Association C-L-R</title>
   <style>
-    /* Corps de la page avec dégradé */
+    .swiper {
+  width: 90%;
+  max-width: 800px;
+  height: 300px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hauteur ajustée pour tablette */
+@media (max-width: 768px) {
+  .swiper {
+    height: 220px;
+  }
+}
+
+/* Hauteur ajustée pour mobile */
+@media (max-width: 480px) {
+  .swiper {
+    height: 180px;
+  }
+}
+    /* Style global avec dégradé rouge → vert → noir */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       scroll-behavior: smooth;
+
+      /* Dégradé de fond */
       background-image: linear-gradient(135deg, #ff2b2b, #00b050, #000000);
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
-      color: #ffffff;
+      color: #ffffff; /* texte blanc pour lisibilité */
     }
 
     header {
       text-align: center;
       padding: 2rem;
     }
+
+    h1 { margin: 0; }
 
     nav {
       background: rgba(0,0,0,0.6);
@@ -38,3 +73,160 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(0,0,0,0.4); /* léger fond sombre pour le contraste */
+      border-radius: 12px;
+    }
+
+    .slideshow {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% {transform: translateX(0);}
+      33% {transform: translateX(-100%);}
+      66% {transform: translateX(-200%);}
+      100% {transform: translateX(0);}
+    }
+
+    footer {
+      background: rgba(0,0,0,0.7);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #ff2b2b;
+      color: white;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #d00000;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Association C-L-R</h1>
+    <p>Unis pour faire vibrer notre communauté</p>
+  </header>
+
+  <nav>
+    <a href="#about">Qui sommes-nous</a>
+    <a href="#actions">Nos actions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section>
+  
+      <div class="swiper">
+  <div class="swiper-wrapper">
+    <img src="CLR.jpg" alt="logo">
+     <!--<img src="CLR birthday 2025.jpeg" alt="birth">-->
+   <!-- <img src="CLR DUNETTE.jpeg" alt="logo">-->
+  </div>
+  <!-- Pagination (les points en bas) -->
+  <!-- Pagination et flèches -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      Nous sommes un groupe d’amis réunis par une passion commune : la bombe – pour nous, c’est bien plus qu’un simple mot, c’est un état d’esprit.
+Toujours prêts à mettre de l’ambiance, nous partageons des moments de rires, de bonne humeur et de convivialité.
+
+Notre groupe, c’est avant tout :
+de l’amitié sincère,
+des souvenirs inoubliables,
+des projets partagés,
+      
+et surtout, une énergie positive qui fait du bien à tout le monde.
+Ici, pas de prise de tête : juste l’envie de profiter de la vie, de se retrouver et de créer des instants explosifs de joie ✨💣
+      AWO AWO AWO !!!
+    </p>
+  </section>
+
+  <section id="actions">
+    <h2>Nos actions</h2>
+    <ul>
+      <li>Camping</li>
+      <li>Whatapp birthday ... Par contre </li>
+      <li>Kantik CLR </li>
+      <li>WCMF Awho awho awho</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form action="https://formspree.io/f/VOUS-DEVEZ-METTRE-VOTRE-CLE" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,               // boucle infinie
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      grabCursor: true,          // curseur main quand on peut glisser
+    });
+  </script>
+
+</body>
+</html>
