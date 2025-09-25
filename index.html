@@ -1,145 +1,145 @@
-!DOCTYPE html
-html lang=fr
-head
-  meta charset=UTF-8
-  meta name=viewport content=width=device-width, initial-scale=1.0
-  titleAssociation Solidarité Localetitle
-  style
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Association Solidarité Locale</title>
+  <style>
     body {
-      font-family Arial, sans-serif;
-      margin 0;
-      scroll-behavior smooth;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      scroll-behavior: smooth;
     }
     header {
-      background #2b6777;
-      color white;
-      text-align center;
-      padding 2rem;
+      background: #2b6777;
+      color: white;
+      text-align: center;
+      padding: 2rem;
     }
-    h1 { margin 0; }
+    h1 { margin: 0; }
     nav {
-      background #52ab98;
-      padding 1rem;
-      text-align center;
+      background: #52ab98;
+      padding: 1rem;
+      text-align: center;
     }
     nav a {
-      margin 0 15px;
-      color white;
-      text-decoration none;
-      font-weight bold;
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
-      padding 3rem 1rem;
-      max-width 900px;
-      margin auto;
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
     }
     .slideshow {
-      position relative;
-      max-width 100%;
-      height 400px;
-      overflow hidden;
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
     }
     .slides {
-      display flex;
-      width 300%;
-      animation slide 12s infinite;
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
     }
     .slides img {
-      width 100%;
-      height 400px;
-      object-fit cover;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
     }
     @keyframes slide {
-      0% {transform translateX(0);}
-      33% {transform translateX(-100%);}
-      66% {transform translateX(-200%);}
-      100% {transform translateX(0);}
+      0% {transform: translateX(0);}
+      33% {transform: translateX(-100%);}
+      66% {transform: translateX(-200%);}
+      100% {transform: translateX(0);}
     }
     footer {
-      background #2b6777;
-      color white;
-      text-align center;
-      padding 1.5rem;
+      background: #2b6777;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
     }
     form {
-      display flex;
-      flex-direction column;
-      gap 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     input, textarea {
-      padding 10px;
-      border 1px solid #ccc;
-      border-radius 6px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
     }
     button {
-      background #52ab98;
-      color white;
-      border none;
-      padding 12px;
-      cursor pointer;
-      border-radius 6px;
+      background: #52ab98;
+      color: white;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 6px;
     }
-    buttonhover {
-      background #3d8a7b;
+    button:hover {
+      background: #3d8a7b;
     }
-  style
-head
-body
+  </style>
+</head>
+<body>
 
-  header
-    h1Association Solidarité Localeh1
-    pUnis pour aider notre communautép
-  header
+  <header>
+    <h1>Association Solidarité Locale</h1>
+    <p>Unis pour aider notre communauté</p>
+  </header>
 
-  nav
-    a href=#aboutQui sommes-nousa
-    a href=#actionsNos actionsa
-    a href=#contactContacta
-  nav
+  <nav>
+    <a href="#about">Qui sommes-nous</a>
+    <a href="#actions">Nos actions</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  section
-    div class=slideshow
-      div class=slides
-        img src=httpsplacekitten.com1000400 alt=Photo 1
-        img src=httpsplacebear.com1000400 alt=Photo 2
-        img src=httpsplacehold.co1000x400 alt=Photo 3
-      div
-    div
-  section
+  <section>
+    <div class="slideshow">
+      <div class="slides">
+        <img src="https://placekitten.com/1000/400" alt="Photo 1">
+        <img src="https://placebear.com/1000/400" alt="Photo 2">
+        <img src="https://placehold.co/1000x400" alt="Photo 3">
+      </div>
+    </div>
+  </section>
 
-  section id=about
-    h2Qui sommes-nous h2
-    p
+  <section id="about">
+    <h2>Qui sommes-nous ?</h2>
+    <p>
       L’Association Solidarité Locale est une organisation à but non lucratif 
       qui œuvre pour venir en aide aux personnes en difficulté dans notre ville. 
       Notre mission est de créer du lien, de soutenir les plus fragiles 
       et de favoriser la solidarité.
-    p
-  section
+    </p>
+  </section>
 
-  section id=actions
-    h2Nos actionsh2
-    ul
-      liDistribution de repas chaque semaineli
-      liCollectes de vêtements et de jouetsli
-      liAccompagnement scolaire et ateliers pour enfantsli
-      liOrganisation d’événements solidairesli
-    ul
-  section
+  <section id="actions">
+    <h2>Nos actions</h2>
+    <ul>
+      <li>Distribution de repas chaque semaine</li>
+      <li>Collectes de vêtements et de jouets</li>
+      <li>Accompagnement scolaire et ateliers pour enfants</li>
+      <li>Organisation d’événements solidaires</li>
+    </ul>
+  </section>
 
-  section id=contact
-    h2Contactez-noush2
-    form action=httpsformspree.iofVOUS-DEVEZ-METTRE-VOTRE-CLE method=POST
-      input type=text name=name placeholder=Votre nom required
-      input type=email name=email placeholder=Votre email required
-      textarea name=message rows=5 placeholder=Votre message requiredtextarea
-      button type=submitEnvoyerbutton
-    form
-  section
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form action="https://formspree.io/f/VOUS-DEVEZ-METTRE-VOTRE-CLE" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
 
-  footer
-    p&copy; 2025 Association Solidarité Localep
-  footer
+  <footer>
+    <p>&copy; 2025 Association Solidarité Locale</p>
+  </footer>
 
-body
-html
+</body>
+</html>
