@@ -8,11 +8,10 @@
 .swiper {
   width: 90%;
   max-width: 800px;
-  height: 300px;
+  height: 300px; /* hauteur fixe pour toutes les slides */
   margin: 2rem auto;
   border-radius: 12px;
   overflow: hidden;
-  /*background-color: #000; /* fond noir si l'image ne remplit pas tout */
 }
 
 .swiper-slide {
@@ -24,7 +23,7 @@
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* garde le ratio d'origine */
+  object-fit: cover; /* remplit toujours la slide */
   object-position: center;
 }
 
@@ -160,19 +159,17 @@
   </nav>
 
     
-    <section>
+<section>
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="CLR.jpg" alt="logo" loading="lazy">
       </div>
-      <img src="CLR.jpg" alt="logo" loading="lazy">
+      <div class="swiper-slide">
+        <img src="CLR_birthday_2025.jpg" alt="birth" loading="lazy">
       </div>
       <div class="swiper-slide">
-        <img src="CLRbirthday2025.jpg" alt="birth" loading="lazy">
-      </div>
-      <div class="swiper-slide">
-        <img src="CLRDUNETTE.jpg" alt="dunette" loading="lazy">
+        <img src="CLR_DUNETTE.jpg" alt="logo" loading="lazy">
       </div>
     </div>
     <!-- Pagination et navigation -->
@@ -220,23 +217,19 @@ Ici, pas de prise de tête : juste l’envie de profiter de la vie, de se retrou
   </section>
 
  <!-- Swiper JS -->
- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
 const swiper = new Swiper('.swiper', {
-  loop: true,               
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  grabCursor: true, 
-  preloadImages: true, // assure que toutes les images sont préchargées
-  updateOnImagesReady: true // force la mise à jour une fois l'image chargée
+  loop: true,
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  grabCursor: true,
+  preloadImages: true,          // précharge toutes les images avant l'affichage
+  updateOnImagesReady: true,    // met à jour les slides après le chargement des images
+  observer: true,               // observe les changements dans le DOM
+  observeParents: true          // observe le parent pour ajuster automatiquement
 });
-  </script>
+</script>
 
 </body>
 </html>
