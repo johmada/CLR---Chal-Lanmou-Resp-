@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Association C-L-R</title>
   <style>
+    .swiper {
+  width: 90%;
+  max-width: 800px;
+  height: 300px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hauteur ajustée pour tablette */
+@media (max-width: 768px) {
+  .swiper {
+    height: 220px;
+  }
+}
+
+/* Hauteur ajustée pour mobile */
+@media (max-width: 480px) {
+  .swiper {
+    height: 180px;
+  }
+}
     /* Style global avec dégradé rouge → vert → noir */
     body {
       font-family: Arial, sans-serif;
@@ -106,6 +141,7 @@
     button:hover {
       background: #d00000;
     }
+    
   </style>
 </head>
 <body>
@@ -175,7 +211,7 @@ Ici, pas de prise de tête : juste l’envie de profiter de la vie, de se retrou
     </form>
   </section>
 
- <!-- Swiper JS -->
+ <!-- Swiper JS 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
@@ -190,7 +226,7 @@ Ici, pas de prise de tête : juste l’envie de profiter de la vie, de se retrou
       },
       grabCursor: true,          // curseur main quand on peut glisser
     });
-  </script>
+  </script>-->
 
 </body>
 </html>
