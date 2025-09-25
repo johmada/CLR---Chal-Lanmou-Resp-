@@ -229,7 +229,9 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  grabCursor: true,          
+  grabCursor: true, 
+  preloadImages: true, // assure que toutes les images sont préchargées
+  updateOnImagesReady: true // force la mise à jour une fois l'image chargée
 });
   </script>
 
